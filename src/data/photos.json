@@ -3,96 +3,128 @@
     "slug": "jussi-1",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/5e74ee97ee7f858556be45df__5DN9547_2%20(1).jpg",
     "credit": "Jussi Vierimaa",
-    "alt": "Barbora Xu facing the camera in a forest"
+    "alt": "Barbora Xu facing the camera in a forest",
+    "width": 4480,
+    "height": 6720
   },
   {
     "slug": "holding-guzheng",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/6125edffce007984d322367a__5DN9760.jpg",
     "credit": "Jussi Vierimaa",
-    "alt": "Barbora Xu in a dress holding her guzheng"
+    "alt": "Barbora Xu in a dress holding her guzheng",
+    "width": 6720,
+    "height": 4480
   },
   {
     "slug": "nuku-nuku-cover",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/6125edad4a57aa7454ae29aa__5DN9614.jpg",
     "credit": "Jussi Vierimaa",
-    "alt": "Barbora Xu standing with her guzheng"
+    "alt": "Barbora Xu standing with her guzheng",
+    "width": 4480,
+    "height": 6720
   },
   {
     "slug": "album-cover-pic",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/6125ed4d3613486d5eb3bcd9__5DN9576_2.jpg",
     "credit": "Jussi Vierimaa",
-    "alt": "Barbora Xu with her guzheng among the trees"
+    "alt": "Barbora Xu with her guzheng among the trees",
+    "width": 4480,
+    "height": 6720
   },
   {
     "slug": "press-pic-looking-into-the-corner",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/6125ec724e8b299cb975ac23__5DN9536.jpg",
     "credit": "Jussi Vierimaa",
-    "alt": "Close-up of Barbora Xu playing guzheng"
+    "alt": "Close-up of Barbora Xu playing guzheng",
+    "width": 6720,
+    "height": 4480
   },
   {
     "slug": "beni-8",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/633f03fc3607e7ad8c44782a_8-DSCF9847.jpg",
     "credit": "Beni Köhler",
-    "alt": "Barbora Xu in performance — photograph 1"
+    "alt": "Barbora Xu in performance — photograph 1",
+    "width": 6000,
+    "height": 4000
   },
   {
     "slug": "beni-7",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/633f03856b9bab0bc285bfc2_7-DSCF9788.jpg",
     "credit": "Beni Köhler",
-    "alt": "Barbora Xu in performance — photograph 2"
+    "alt": "Barbora Xu in performance — photograph 2",
+    "width": 4000,
+    "height": 6000
   },
   {
     "slug": "beni-18",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/633f03248b8cc0858f7e1d0a_18-DSCF0018.jpg",
     "credit": "Beni Köhler",
-    "alt": "Barbora Xu in performance — photograph 3"
+    "alt": "Barbora Xu in performance — photograph 3",
+    "width": 4000,
+    "height": 6000
   },
   {
     "slug": "beni-2",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/633f083f62b738c0bcdb4b00_2-DSCF9654.jpg",
     "credit": "",
-    "alt": "Barbora Xu in performance — photograph 4"
+    "alt": "Barbora Xu in performance — photograph 4",
+    "width": 4000,
+    "height": 6000
   },
   {
     "slug": "beni-146",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/633f0e8f66410ba7e4cd9227_146-DSCF0021.jpg",
     "credit": "Beni Köhler",
-    "alt": "Barbora Xu in performance — photograph 5"
+    "alt": "Barbora Xu in performance — photograph 5",
+    "width": 6000,
+    "height": 4000
   },
   {
     "slug": "beni-10",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/633f0870239ccc613df9bc5d_10-DSCF9868.jpg",
     "credit": "",
-    "alt": "Barbora Xu in performance — photograph 6"
+    "alt": "Barbora Xu in performance — photograph 6",
+    "width": 4000,
+    "height": 6000
   },
   {
     "slug": "beni-4",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/633f08bed6acc7774d898eb7_4-DSCF9710.jpg",
     "credit": "",
-    "alt": "Barbora Xu in performance — photograph 7"
+    "alt": "Barbora Xu in performance — photograph 7",
+    "width": 4000,
+    "height": 6000
   },
   {
     "slug": "beni-5",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/633f08fe596977d7fc6998b5_5-DSCF9747.jpg",
     "credit": "",
-    "alt": "Barbora Xu in performance — photograph 8"
+    "alt": "Barbora Xu in performance — photograph 8",
+    "width": 4000,
+    "height": 6000
   },
   {
     "slug": "beni-6",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/633f0c06633ab64eb8c41a48_6-DSCF9755.jpg",
     "credit": "Beni Köhler",
-    "alt": "Barbora Xu in performance — photograph 9"
+    "alt": "Barbora Xu in performance — photograph 9",
+    "width": 4000,
+    "height": 6000
   },
   {
     "slug": "beni-152",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/633f0e34caf35267c2c5c36a_152-DSCF0050.jpg",
     "credit": "Beni Köhler",
-    "alt": "Barbora Xu in performance — photograph 10"
+    "alt": "Barbora Xu in performance — photograph 10",
+    "width": 4000,
+    "height": 6000
   },
   {
     "slug": "beni-156",
     "source": "https://cdn.prod.website-files.com/5b81824a947a5638fe062ab4/633f0ebc753435b5a42dffca_156-DSCF0060.jpg",
     "credit": "",
-    "alt": "Barbora Xu in performance — photograph 11"
+    "alt": "Barbora Xu in performance — photograph 11",
+    "width": 6000,
+    "height": 4000
   }
 ]

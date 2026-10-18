@@ -1,11 +1,35 @@
 {
   "albums": [
-    {"title":"The Garden of Otava","year":"2025","description":"With Tapani Rinne, Ilkka Heinonen, Asja Valcic and Mikko H. Haapoja.","url":"https://linktr.ee/Barboraxu","label":"Find listening links"},
-    {"title":"Olin Ennen","year":"2021 · Nordic Notes","description":"Finnish and Chinese poetry, voice, guzheng and kantele.","url":"https://open.spotify.com/album/1nHA0G1YnoUayjEzP30Om8","label":"Listen on Spotify"}
+    {
+      "title": "The Garden of Otava",
+      "year": "2025",
+      "description": "With Tapani Rinne, Ilkka Heinonen, Asja Valcic and Mikko H. Haapoja.",
+      "url": "https://linktr.ee/Barboraxu",
+      "label": "Find listening links"
+    },
+    {
+      "title": "Olin Ennen",
+      "year": "2021 · Nordic Notes",
+      "description": "Finnish and Chinese poetry, voice, guzheng and kantele.",
+      "url": "https://open.spotify.com/album/1nHA0G1YnoUayjEzP30Om8",
+      "label": "Listen on Spotify"
+    }
   ],
   "videos": [
-    {"title":"Olin Ennen Otramaana","id":"Z2j6kqzDDk4","description":"Guzheng and voice · Barbora Xu"},
-    {"title":"Nuku nuku nurmilintu","id":"Ztz8xzuhKK8","description":"Live at Making Tracks, 2019"},
-    {"title":"Olin ennen — album release concert","id":"oX0X8DcIN7M","description":"Full concert stream"}
+    {
+      "title": "Olin Ennen Otramaana",
+      "id": "Z2j6kqzDDk4",
+      "description": "Guzheng and voice · Barbora Xu"
+    },
+    {
+      "title": "Nuku nuku nurmilintu",
+      "id": "Ztz8xzuhKK8",
+      "description": "Live at Making Tracks, 2019"
+    },
+    {
+      "title": "Olin ennen — album release concert",
+      "id": "oX0X8DcIN7M",
+      "description": "Full concert stream"
+    }
   ]
 }

@@ -53,3 +53,10 @@ The Webflow website stays live on barboraxu.com until DNS is changed. See `migra
 ## Tools
 
 Node 26, npm, Astro 7.4.0. No database or server needed. `npm run preview` serves a production build locally. If the Astro development server remains running, `npx astro dev stop` stops it.
+
+## Images and search metadata
+
+The canonical domain is `https://www.barboraxu.com`. The sitemap is generated at `/sitemap.xml`.
+Run `node scripts/prepare-images.mjs` after adding original JPEGs to regenerate 480px, 800px and 1400px WebPs, image dimensions and the social preview. Pages use the shared `Photo.astro` component; original JPEGs remain available through explicit links.
+
+The Instagram teaser loads only after pressing Play. It is shown on the homepage while an Old Forest Echoes event remains upcoming. The daily deployment updates this automatically.

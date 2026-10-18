@@ -1,4 +1,16 @@
 ---
-import Base from '../layouts/Base.astro';
+import Base from "../layouts/Base.astro";
 ---
-<Base title="Page not found"><section class="section"><p class="eyebrow">404</p><h1>A little <em>off the path.</em></h1><p>This page could not be found.</p><a class="button" href={import.meta.env.BASE_URL}>Return home ↗</a></section></Base>
+
+<Base title="Page not found">
+  <section class="section">
+    <p class="eyebrow">404</p>
+    <h1>
+      A little <em>off the path.</em>
+    </h1>
+    <p>This page could not be found.</p>
+    <a class="button" href={import.meta.env.BASE_URL}>
+      Return home ↗
+    </a>
+  </section>
+</Base>

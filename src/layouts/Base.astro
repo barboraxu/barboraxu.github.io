@@ -1,37 +1,128 @@
 ---
-import '../styles/global.css';
-import site from '../data/site.json';
-const {title = site.name, description = site.intro, home = false} = Astro.props;
+import "../styles/global.css";
+import site from "../data/site.json";
+const descriptions = {
+  Music:
+    "Listen to Barbora Xu’s albums Olin Ennen and The Garden of Otava, and watch live performances of voice, guzheng and kantele.",
+  Concerts:
+    "Explore Barbora Xu’s upcoming concerts, dates and ticket links, plus an archive of past performances.",
+  Gallery:
+    "Portraits and performance photographs of Barbora Xu, with photographer credits and original images.",
+  "About & EPK":
+    "Meet singer, composer and multi-instrumentalist Barbora Xu. Biography, music and publicity photographs for press and presenters.",
+  "Old Forest Echoes":
+    "Discover Old Forest Echoes: music, art and concerts supporting the protection of Finland’s old-growth forests.",
+  Contact:
+    "Contact Barbora Xu for bookings, performances, collaborations and press enquiries. Artist and Nordic Notes label contact details.",
+};
+const { title = site.name, home = false } = Astro.props;
+const description =
+  Astro.props.description ?? descriptions[title] ?? site.intro;
 const base = import.meta.env.BASE_URL;
-const link = (path = '') => `${base}${path}`;
-const nav = [['music/','Music'],['concert/','Concerts'],['gallery/','Gallery'],['epk/','About & EPK'],['oldforestechoes/','Old Forest Echoes'],['contact/','Contact']];
+const link = (path = "") => `${base}${path}`;
+const nav = [
+  ["music/", "Music"],
+  ["concert/", "Concerts"],
+  ["gallery/", "Gallery"],
+  ["epk/", "About & EPK"],
+  ["oldforestechoes/", "Old Forest Echoes"],
+  ["contact/", "Contact"],
+];
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
+
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width" />
-  <title>{title === site.name ? `${title} — Voice, strings & the natural world` : `${title} — ${site.name}`}</title>
-  <meta name="description" content={description} /><link rel="canonical" href={canonical} />
-  <meta property="og:title" content={title} /><meta property="og:description" content={description} />
-  <meta property="og:type" content="website" /><meta property="og:url" content={canonical} />
-  <meta property="og:image" content={new URL(link('images/album-cover-pic.jpg'), Astro.site)} />
-  <meta name="theme-color" content="#17241e" /><link rel="icon" type="image/svg+xml" href={link('images/guzheng.svg')} />
-</head>
-<body class:list={[{home}]}>
-<a class="skip" href="#main">Skip to content</a>
-<header class="header">
-  <a class="brand" href={link()} aria-label="Barbora Xu home"><img src={link('images/guzheng.svg')} width="52" height="30" alt="" /><span>BARBORA XU</span></a>
-  <button class="menu-toggle" aria-controls="navigation" aria-expanded="false">Menu <span aria-hidden="true">＋</span></button>
-  <nav id="navigation" aria-label="Main navigation">{nav.map(([path,label]) => <a href={link(path)} aria-current={Astro.url.pathname.replace(/\/$/,'')===link(path).replace(/\/$/,'')?'page':undefined}>{label}</a>)}</nav>
-</header>
-<main id="main"><slot /></main>
-<footer><div><a class="footer-name" href={link()}>Barbora Xu</a><p>Voice, strings & the natural world.</p></div><div class="footer-links">{site.socials.map(s=><a href={s.url}>{s.label} ↗</a>)}</div><div class="footer-bottom"><span>© {new Date().getFullYear()} Barbora Xu</span><a href={`mailto:${site.email}`}>{site.email}</a></div></footer>
-<script>
-const button=document.querySelector('.menu-toggle');
-const nav=document.querySelector('#navigation');
-button?.addEventListener('click',()=>{const expanded=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-expanded',String(!expanded));nav?.classList.toggle('open',!expanded);});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'){button?.setAttribute('aria-expanded','false');nav?.classList.remove('open');}});
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title === site.name ? `${title} — Voice, strings & the natural world` : `${title} — ${site.name}`}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta
+      property="og:image"
+      content={new URL(link("images/social-preview.jpg"), Astro.site)}
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Barbora Xu with her guzheng in the forest"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#17241e" />
+    <link rel="icon" type="image/svg+xml" href={link("images/guzheng.svg")} />
+  </head>
+  <body class:list={[{ home }]}>
+    <a class="skip" href="#main">
+      Skip to content
+    </a>
+    <header class="header">
+      <a class="brand" href={link()} aria-label="Barbora Xu home">
+        <img src={link("images/guzheng.svg")} width="52" height="30" alt="" />
+        <span>BARBORA XU</span>
+      </a>
+      <button
+        class="menu-toggle"
+        aria-controls="navigation"
+        aria-expanded="false"
+      >
+        Menu <span aria-hidden="true">＋</span>
+      </button>
+      <nav id="navigation" aria-label="Main navigation">
+        {nav.map(([path, label]) => (
+          <a
+            href={link(path)}
+            aria-current={
+              Astro.url.pathname.replace(/\/$/, "") ===
+              link(path).replace(/\/$/, "")
+                ? "page"
+                : undefined
+            }
+          >
+            {label}
+          </a>
+        ))}
+      </nav>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer>
+      <div>
+        <a class="footer-name" href={link()}>
+          Barbora Xu
+        </a>
+        <p>Voice, strings & the natural world.</p>
+      </div>
+      <div class="footer-links">
+        {site.socials.map((s) => (
+          <a href={s.url}>{s.label} ↗</a>
+        ))}
+      </div>
+      <div class="footer-bottom">
+        <span>© {new Date().getFullYear()} Barbora Xu</span>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </div>
+    </footer>
+    <script>
+      const button = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("#navigation");
+      button?.addEventListener("click", () => {
+        const expanded = button.getAttribute("aria-expanded") === "true";
+        button.setAttribute("aria-expanded", String(!expanded));
+        nav?.classList.toggle("open", !expanded);
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          button?.setAttribute("aria-expanded", "false");
+          nav?.classList.remove("open");
+        }
+      });
+    </script>
+  </body>
 </html>
