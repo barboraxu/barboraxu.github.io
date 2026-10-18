@@ -22,6 +22,7 @@ Useful requests for Codex:
 | What to change | File |
 | --- | --- |
 | Biography, contact, social links | `src/data/site.json` |
+| Old Forest Echoes summary | `src/data/old-forest-echoes.json` |
 | Concerts and residencies | `src/data/concerts.json` |
 | Albums and videos | `src/data/music.json` |
 | Photo captions and credits | `src/data/photos.json` |

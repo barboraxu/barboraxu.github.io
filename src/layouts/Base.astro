@@ -4,7 +4,7 @@ import site from '../data/site.json';
 const {title = site.name, description = site.intro, home = false} = Astro.props;
 const base = import.meta.env.BASE_URL;
 const link = (path = '') => `${base}${path}`;
-const nav = [['music/','Music'],['concert/','Concerts'],['gallery/','Gallery'],['epk/','About & EPK'],['oldforestechoes/','Projects'],['contact/','Contact']];
+const nav = [['music/','Music'],['concert/','Concerts'],['gallery/','Gallery'],['epk/','About & EPK'],['oldforestechoes/','Old Forest Echoes'],['contact/','Contact']];
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
