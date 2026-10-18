@@ -20,12 +20,12 @@ const reelUrl = "https://www.instagram.com/reel/DeRLCZGsbDm/";
       Watch on Instagram <span aria-hidden="true">↗</span>
     </a>
   </div>
-  <div class="teaser-player" data-instagram-teaser>
-    <button
-      type="button"
-      class="teaser-load"
-      aria-label="Play concert teaser on Instagram"
-    >
+  <div
+    class="teaser-player"
+    data-concert-teaser
+    data-video-src={`${import.meta.env.BASE_URL}videos/caisa-teaser.mp4`}
+  >
+    <button type="button" class="teaser-load" aria-label="Play concert teaser">
       <img
         src={`${import.meta.env.BASE_URL}images/caisa-teaser.webp`}
         width="720"
@@ -41,14 +41,23 @@ const reelUrl = "https://www.instagram.com/reel/DeRLCZGsbDm/";
   </div>
 </section>
 <script>
-  const player = document.querySelector("[data-instagram-teaser]");
+  const player = document.querySelector<HTMLElement>("[data-concert-teaser]");
   const button = player?.querySelector<HTMLButtonElement>(".teaser-load");
   button?.addEventListener("click", () => {
-    const frame = document.createElement("iframe");
-    frame.src = "https://www.instagram.com/reel/DeRLCZGsbDm/embed/";
-    frame.title = "Caisa concert teaser by Barbora Xu on Instagram";
-    frame.allow = "autoplay; encrypted-media; fullscreen; picture-in-picture";
-    frame.allowFullscreen = true;
-    button.replaceWith(frame);
+    const video = document.createElement("video");
+    video.src = player!.dataset.videoSrc!;
+    video.poster = button.querySelector("img")!.src;
+    video.controls = true;
+    video.playsInline = true;
+    video.width = 720;
+    video.height = 1280;
+    video.setAttribute("aria-label", "Caisa concert teaser by Barbora Xu");
+    video.tabIndex = 0;
+    button.replaceWith(video);
+    video.focus({ preventScroll: true });
+    // Start inside the user's click gesture, with native controls as a fallback.
+    video.play().catch(() => {
+      /* The visitor can retry using the video controls. */
+    });
   });
 </script>
