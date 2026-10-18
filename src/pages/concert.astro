@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import concerts from '../data/concerts.json';
+const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Helsinki',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+const upcoming=concerts.filter(c=>c.endDate>=today).sort((a,b)=>a.date.localeCompare(b.date));
+const past=concerts.filter(c=>c.endDate<today).sort((a,b)=>b.date.localeCompare(a.date));
+const years=[...new Set(past.map(c=>c.date.slice(0,4)))];
+---
+<Base title="Concerts"><header class="page-head"><p class="eyebrow">Concerts & encounters</p><h1>Come <em>listen.</em></h1><p>From concert halls to forest clearings. Performances, collaborations and residencies.</p></header><section class="content"><h2>Upcoming</h2>{upcoming.length ? <ul class="event-list">{upcoming.map(c=><li><time datetime={c.date}>{c.dateLabel}</time><div><h3>{c.title}</h3>{c.location && <p>{c.location}</p>}{c.url && <a href={c.url}>Event details ↗</a>}</div></li>)}</ul> : <div class="empty"><p>New dates will be announced here.</p><a href={`${import.meta.env.BASE_URL}contact/`}>Get in touch about a performance ↗</a></div>}<p class="eyebrow">Past performances</p><h2>Concert archive.</h2>{years.map(year=><section><h3>{year}</h3><ul class="event-list">{past.filter(c=>c.date.startsWith(year)).map(c=><li><time datetime={c.date}>{c.dateLabel}</time><div><h3>{c.title}</h3>{c.location && <p>{c.location}</p>}{c.url && <a href={c.url}>Event details ↗</a>}</div></li>)}</ul></section>)}</section></Base>

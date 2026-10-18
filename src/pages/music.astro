@@ -1,0 +1,5 @@
+---
+import Base from '../layouts/Base.astro';
+import music from '../data/music.json';
+---
+<Base title="Music"><header class="page-head"><p class="eyebrow">Recordings & performances</p><h1>A world <em>of sound.</em></h1><p>Voice, guzheng and kantele. Explore the albums and watch Barbora in performance.</p></header><div class="content">{music.albums.map(album=><article class="album"><span class="album-year">{album.year}</span><div><h2>{album.title}</h2><p>{album.description}</p></div><a class="text-link" href={album.url}>{album.label} ↗</a></article>)}</div><section class="section"><p class="eyebrow">Watch & listen</p><h2>In performance.</h2><div class="video-grid">{music.videos.map(video=><article><iframe loading="lazy" src={`https://www.youtube-nocookie.com/embed/${video.id}`} title={video.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><h3>{video.title}</h3><p>{video.description} · <a href={`https://www.youtube.com/watch?v=${video.id}`}>Watch on YouTube ↗</a></p></article>)}</div></section></Base>

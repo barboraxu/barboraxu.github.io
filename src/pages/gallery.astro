@@ -1,0 +1,6 @@
+---
+import Base from '../layouts/Base.astro';
+import photos from '../data/photos.json';
+const base=import.meta.env.BASE_URL;
+---
+<Base title="Gallery"><header class="page-head"><p class="eyebrow">A visual journey</p><h1>In the <em>frame.</em></h1><p>Portraits and performances. Select a photograph to view it in full.</p></header><div class="content gallery">{photos.map(photo=><figure><a href={`${base}photos/${photo.slug}/`}><img src={`${base}images/${photo.slug}.webp`} alt={photo.alt} loading="lazy" /></a>{photo.credit && <figcaption>Photography · {photo.credit}</figcaption>}</figure>)}</div></Base>
